@@ -50,13 +50,13 @@
       <p class="lead">EchoWords is a local-first Chrome extension for saving words you select from web pages, visible YouTube captions, and PDF selections.</p>
 
       <h2>Data stored on your device</h2>
-      <p>EchoWords stores saved words, nearby article text or visible caption context, source titles and URLs, capture times, YouTube video IDs and timestamps, and optional Traditional or Simplified Chinese translations and your edits. Vocabulary and local review dates, intervals, and counts are stored in IndexedDB in your current Chrome profile.</p>
+      <p>EchoWords stores saved words, nearby article text or visible caption context, source titles and URLs, capture times, YouTube video IDs and timestamps, optional Traditional or Simplified Chinese translations of English words, English translations of Chinese words, and your edits. Vocabulary and local review dates, intervals, and counts are stored in IndexedDB in your current Chrome profile.</p>
 
       <h2>Collection, translation, and sharing</h2>
       <p>EchoWords does not send captured content, vocabulary, browsing history, or usage data to a developer server, analytics provider, advertising service, or other third party. It does not require an account or read or monitor your clipboard.</p>
       <p>EchoWords’s use of information received from Google APIs adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements. It uses this information only to provide the vocabulary features described here.</p>
-      <p>After you choose a target language, EchoWords uses Chrome’s built-in Translator API to translate saved words on your device. Your target-language preference is stored in localStorage in this Chrome profile. EchoWords does not make a translation network request or use a remote AI provider. Chrome may download and manage the required language pack.</p>
-      <p>Exports happen only when you choose an export action. Chrome saves the JSON file under your control. <strong>Export for iPhone</strong> contains only words and translations in your selected language; <strong>Export JSON</strong> contains full backup records. EchoWords does not upload exports to Google Drive or another service. When you choose <strong>Import backup</strong>, EchoWords reads only the file you select, merges valid records into local IndexedDB, and does not upload the file.</p>
+      <p>After you choose a Chinese target language for English words, EchoWords uses Chrome’s built-in Translator API to translate saved English words into Chinese and saved Chinese words into English on your device. Your Chinese target-language preference is stored in localStorage in this Chrome profile. EchoWords does not make a translation network request or use a remote AI provider. Chrome may download and manage the required language packs.</p>
+      <p>Exports happen only when you choose an export action. Chrome saves the JSON file under your control. <strong>Export for iPhone</strong> contains only words and their corresponding translations (English for Chinese words, or your selected Chinese language for English words); <strong>Export JSON</strong> contains full backup records. EchoWords does not upload exports to Google Drive or another service. When you choose <strong>Import backup</strong>, EchoWords reads only the file you select, merges valid records into local IndexedDB, and does not upload the file.</p>
 
       <h2>Chrome permissions</h2>
       <ul>
@@ -81,13 +81,13 @@
       <p class="lead">EchoWords 是一款以本地存储为主的 Chrome 扩展程序，用于保存你在网页文章、屏幕上可见的 YouTube 字幕和 PDF 中选取的单词。</p>
 
       <h2>保存在设备上的数据</h2>
-      <p>EchoWords 保存单词、附近的文章文本或可见字幕上下文、来源标题和网址、采集时间、YouTube 视频 ID 和时间戳，以及可选的繁体或简体中文翻译和你的修改。词汇记录和本地复习日期、间隔、次数存储在当前 Chrome 配置文件的 IndexedDB 中。</p>
+      <p>EchoWords 保存单词、附近的文章文本或可见字幕上下文、来源标题和网址、采集时间、YouTube 视频 ID 和时间戳，以及英文单词的繁体或简体中文翻译、中文词条的英文翻译和你的修改。词汇记录和本地复习日期、间隔、次数存储在当前 Chrome 配置文件的 IndexedDB 中。</p>
 
       <h2>数据收集、翻译与共享</h2>
       <p>EchoWords 不会将采集内容、词汇、浏览历史或使用数据发送给开发者服务器、分析服务商、广告服务商或其他第三方。它不要求注册账户，也不会读取或监控剪贴板。</p>
       <p>EchoWords 对从 Google API 获取的信息的使用遵守 Chrome 网上应用店用户数据政策，包括“有限使用”要求。这些信息仅用于提供本政策所述的词汇功能。</p>
-      <p>选择目标语言后，EchoWords 使用 Chrome 内置的 Translator API 在设备上自动翻译保存的单词。目标语言偏好保存在当前 Chrome 配置文件的 localStorage 中。EchoWords 不会为翻译发起网络请求，也不使用远程 AI 服务；Chrome 可能下载和管理所需的语言包。</p>
-      <p>只有你主动选择导出时才会生成文件，Chrome 将 JSON 文件保存到由你控制的位置。<strong>导出到 iPhone</strong> 仅包含单词及所选语言的翻译；<strong>导出 JSON</strong> 包含完整备份记录。EchoWords 不会将导出文件上传到 Google Drive 或其他服务。选择<strong>导入备份</strong>时，EchoWords 只读取你选择的文件，将有效记录合并到本地 IndexedDB，不会上传该文件。</p>
+      <p>为英文单词选择中文目标语言后，EchoWords 使用 Chrome 内置的 Translator API 在设备上将英文单词翻译为中文，并将中文词条翻译为英文。中文目标语言偏好保存在当前 Chrome 配置文件的 localStorage 中。EchoWords 不会为翻译发起网络请求，也不使用远程 AI 服务；Chrome 可能下载和管理所需的语言包。</p>
+      <p>只有你主动选择导出时才会生成文件，Chrome 将 JSON 文件保存到由你控制的位置。<strong>导出到 iPhone</strong> 仅包含单词及对应翻译（中文词条对应英文，英文单词对应所选中文）；<strong>导出 JSON</strong> 包含完整备份记录。EchoWords 不会将导出文件上传到 Google Drive 或其他服务。选择<strong>导入备份</strong>时，EchoWords 只读取你选择的文件，将有效记录合并到本地 IndexedDB，不会上传该文件。</p>
 
       <h2>Chrome 权限</h2>
       <ul>
