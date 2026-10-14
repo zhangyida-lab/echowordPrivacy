@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="EchoWords privacy policy: what the Chrome extension stores, how it uses data, and how to delete it.">
+  <title>Privacy Policy · EchoWords</title>
+  <style>
+    :root { color-scheme: light; --ink: #17243a; --muted: #58677b; --line: #d7dfdc; --blue: #3d7090; --yellow: #f5c54f; --paper: #f8f9f6; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.75 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    a { color: var(--blue); text-underline-offset: .18em; }
+    a:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+    .wrap { width: min(100% - 2.5rem, 760px); margin-inline: auto; }
+    header { border-bottom: 1px solid var(--line); }
+    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.2rem; }
+    .brand { display: flex; align-items: center; gap: .7rem; color: var(--ink); font-weight: 700; text-decoration: none; }
+    .mark { display: inline-grid; place-items: center; width: 2.1rem; height: 2.1rem; border-radius: 50%; background: var(--yellow); font: bold 1.4rem Georgia, serif; }
+    nav { display: flex; gap: 1rem; font-size: .9rem; white-space: nowrap; }
+    main { padding-block: 4rem 5rem; }
+    .eyebrow { color: var(--blue); font-size: .78rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; line-height: 1.18; }
+    h1 { margin: .55rem 0 1rem; font-size: clamp(2.6rem, 8vw, 4.3rem); }
+    h2 { margin: 2.2rem 0 .65rem; font-size: 1.7rem; }
+    p, ul { margin: .65rem 0; }
+    ul { padding-left: 1.35rem; }
+    li + li { margin-top: .45rem; }
+    .lead { font-size: 1.12rem; }
+    .date { color: var(--muted); font-size: .9rem; }
+    .language { scroll-margin-top: 2rem; }
+    .language + .language { margin-top: 5rem; padding-top: 4rem; border-top: 1px solid var(--line); }
+    code { padding: .08rem .3rem; background: #e9eeeb; border-radius: .2rem; font-size: .88em; overflow-wrap: anywhere; }
+    footer { border-top: 1px solid var(--line); padding-block: 1.5rem 2.5rem; color: var(--muted); font-size: .85rem; }
+    @media (max-width: 520px) { .topbar { align-items: flex-start; } nav { padding-top: .35rem; } main { padding-top: 2.8rem; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap topbar">
+      <a class="brand" href="#english" aria-label="EchoWords privacy policy"><span class="mark" aria-hidden="true">E</span><span>EchoWords</span></a>
+      <nav aria-label="Language"><a href="#english" lang="en">English</a><a href="#chinese" lang="zh-CN">简体中文</a></nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <article id="english" class="language" lang="en" aria-labelledby="title-en">
+      <div class="eyebrow">EchoWords · Chrome extension</div>
+      <h1 id="title-en">Privacy Policy</h1>
+      <p class="date">Effective October 13, 2026</p>
+      <p class="lead">EchoWords is a local-first Chrome extension for saving words you select from web pages, visible YouTube captions, and PDF selections.</p>
+
+      <h2>Data stored on your device</h2>
+      <p>EchoWords stores saved words, nearby article text or visible caption context, source titles and URLs, capture times, YouTube video IDs and timestamps, and optional Traditional or Simplified Chinese translations and your edits. Vocabulary and local review dates, intervals, and counts are stored in IndexedDB in your current Chrome profile.</p>
+
+      <h2>Collection, translation, and sharing</h2>
+      <p>EchoWords does not send captured content, vocabulary, browsing history, or usage data to a developer server, analytics provider, advertising service, or other third party. It does not require an account or read or monitor your clipboard.</p>
+      <p>EchoWords’s use of information received from Google APIs adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements. It uses this information only to provide the vocabulary features described here.</p>
+      <p>After you choose a target language, EchoWords uses Chrome’s built-in Translator API to translate saved words on your device. Your target-language preference is stored in localStorage in this Chrome profile. EchoWords does not make a translation network request or use a remote AI provider. Chrome may download and manage the required language pack.</p>
+      <p>Exports happen only when you choose an export action. Chrome saves the JSON file under your control. <strong>Export for iPhone</strong> contains only words and translations in your selected language; <strong>Export JSON</strong> contains full backup records. EchoWords does not upload exports to Google Drive or another service. When you choose <strong>Import backup</strong>, EchoWords reads only the file you select, merges valid records into local IndexedDB, and does not upload the file.</p>
+
+      <h2>Chrome permissions</h2>
+      <ul>
+        <li><code>activeTab</code> and <code>scripting</code> read your explicit selection after you invoke the capture shortcut on an ordinary web page.</li>
+        <li>Access to <code>https://www.youtube.com/*</code> reads only captions currently rendered on screen and preserves video playback state.</li>
+        <li><code>storage</code> supports local extension preferences; vocabulary records remain in IndexedDB.</li>
+        <li><code>contextMenus</code> provides a user-triggered PDF selection capture action.</li>
+        <li><code>offscreen</code> lets a hidden extension document read the saved localStorage language preference and run on-device translation after capture, even when the vocabulary page is closed.</li>
+      </ul>
+      <p>EchoWords does not download complete YouTube transcripts or automatically collect page content.</p>
+
+      <h2>Retention and deletion</h2>
+      <p>Data remains in your Chrome profile until you delete individual words, clear the extension’s site data, remove the extension, or delete the browser profile. Removing the extension or profile may permanently remove saved data. You can create a full local backup with <strong>Export JSON</strong>.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>If EchoWords later adds network sync, accounts, analytics, or other data use, this policy and the extension’s permissions will be updated before that feature is released.</p>
+    </article>
+
+    <article id="chinese" class="language" lang="zh-CN" aria-labelledby="title-zh">
+      <div class="eyebrow">EchoWords · Chrome 扩展程序</div>
+      <h1 id="title-zh">隐私政策</h1>
+      <p class="date">生效日期：2026 年 10 月 13 日</p>
+      <p class="lead">EchoWords 是一款以本地存储为主的 Chrome 扩展程序，用于保存你在网页文章、屏幕上可见的 YouTube 字幕和 PDF 中选取的单词。</p>
+
+      <h2>保存在设备上的数据</h2>
+      <p>EchoWords 保存单词、附近的文章文本或可见字幕上下文、来源标题和网址、采集时间、YouTube 视频 ID 和时间戳，以及可选的繁体或简体中文翻译和你的修改。词汇记录和本地复习日期、间隔、次数存储在当前 Chrome 配置文件的 IndexedDB 中。</p>
+
+      <h2>数据收集、翻译与共享</h2>
+      <p>EchoWords 不会将采集内容、词汇、浏览历史或使用数据发送给开发者服务器、分析服务商、广告服务商或其他第三方。它不要求注册账户，也不会读取或监控剪贴板。</p>
+      <p>EchoWords 对从 Google API 获取的信息的使用遵守 Chrome 网上应用店用户数据政策，包括“有限使用”要求。这些信息仅用于提供本政策所述的词汇功能。</p>
+      <p>选择目标语言后，EchoWords 使用 Chrome 内置的 Translator API 在设备上自动翻译保存的单词。目标语言偏好保存在当前 Chrome 配置文件的 localStorage 中。EchoWords 不会为翻译发起网络请求，也不使用远程 AI 服务；Chrome 可能下载和管理所需的语言包。</p>
+      <p>只有你主动选择导出时才会生成文件，Chrome 将 JSON 文件保存到由你控制的位置。<strong>导出到 iPhone</strong> 仅包含单词及所选语言的翻译；<strong>导出 JSON</strong> 包含完整备份记录。EchoWords 不会将导出文件上传到 Google Drive 或其他服务。选择<strong>导入备份</strong>时，EchoWords 只读取你选择的文件，将有效记录合并到本地 IndexedDB，不会上传该文件。</p>
+
+      <h2>Chrome 权限</h2>
+      <ul>
+        <li><code>activeTab</code> 和 <code>scripting</code>：你在普通网页上触发采集快捷键后，读取你明确选中的文本。</li>
+        <li><code>https://www.youtube.com/*</code>：仅读取当前显示在屏幕上的字幕，并保留视频播放状态。</li>
+        <li><code>storage</code>：保存本地扩展程序偏好；词汇记录仍保存在 IndexedDB。</li>
+        <li><code>contextMenus</code>：提供由用户触发的 PDF 选词采集操作。</li>
+        <li><code>offscreen</code>：即使词汇页面已关闭，也允许隐藏的扩展程序文档读取已保存的 localStorage 语言偏好，并在采集后执行设备端翻译。</li>
+      </ul>
+      <p>EchoWords 不下载完整的 YouTube 字幕稿，也不会自动收集整个页面的内容。</p>
+
+      <h2>保留与删除</h2>
+      <p>数据会保留在 Chrome 配置文件中，直到你删除单个单词、清除扩展程序的网站数据、移除扩展程序或删除浏览器配置文件。移除扩展程序或配置文件可能永久删除已保存的数据。你可以使用<strong>导出 JSON</strong> 创建完整的本地备份。</p>
+
+      <h2>政策变更</h2>
+      <p>如果 EchoWords 日后增加网络同步、账户、分析功能或其他数据用途，本政策和扩展程序权限将在相关功能发布前更新。</p>
+    </article>
+  </main>
+  <footer><div class="wrap">© EchoWords · <a href="#english">English</a> / <a href="#chinese">简体中文</a></div></footer>
+</body>
+</html>
