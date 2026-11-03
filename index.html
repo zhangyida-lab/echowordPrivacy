@@ -1,110 +1,305 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="EchoWords privacy policy: what the Chrome extension stores, how it uses data, and how to delete it.">
-  <title>Privacy Policy · EchoWords</title>
+  <meta name="description" content="语栖 Chrome 扩展隐私政策：了解采词、本地保存、音标查询、Google Drive 同步与数据删除。">
+  <title>Chrome 扩展隐私政策 · 语栖 EchoWords</title>
+  <link rel="icon" href="data:image/png;base64,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" type="image/png">
   <style>
-    :root { color-scheme: light; --ink: #17243a; --muted: #58677b; --line: #d7dfdc; --blue: #3d7090; --yellow: #f5c54f; --paper: #f8f9f6; }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.75 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    a { color: var(--blue); text-underline-offset: .18em; }
-    a:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
-    .wrap { width: min(100% - 2.5rem, 760px); margin-inline: auto; }
-    header { border-bottom: 1px solid var(--line); }
-    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.2rem; }
-    .brand { display: flex; align-items: center; gap: .7rem; color: var(--ink); font-weight: 700; text-decoration: none; }
-    .mark { display: inline-grid; place-items: center; width: 2.1rem; height: 2.1rem; border-radius: 50%; background: var(--yellow); font: bold 1.4rem Georgia, serif; }
-    nav { display: flex; gap: 1rem; font-size: .9rem; white-space: nowrap; }
-    main { padding-block: 4rem 5rem; }
-    .eyebrow { color: var(--blue); font-size: .78rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
-    h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; line-height: 1.18; }
-    h1 { margin: .55rem 0 1rem; font-size: clamp(2.6rem, 8vw, 4.3rem); }
-    h2 { margin: 2.2rem 0 .65rem; font-size: 1.7rem; }
-    p, ul { margin: .65rem 0; }
-    ul { padding-left: 1.35rem; }
-    li + li { margin-top: .45rem; }
-    .lead { font-size: 1.12rem; }
-    .date { color: var(--muted); font-size: .9rem; }
-    .language { scroll-margin-top: 2rem; }
-    .language + .language { margin-top: 5rem; padding-top: 4rem; border-top: 1px solid var(--line); }
-    code { padding: .08rem .3rem; background: #e9eeeb; border-radius: .2rem; font-size: .88em; overflow-wrap: anywhere; }
-    footer { border-top: 1px solid var(--line); padding-block: 1.5rem 2.5rem; color: var(--muted); font-size: .85rem; }
-    @media (max-width: 520px) { .topbar { align-items: flex-start; } nav { padding-top: .35rem; } main { padding-top: 2.8rem; } }
-  </style>
+:root {
+  color-scheme: light;
+  --ink: #17243a;
+  --blue: #355d7c;
+  --paper: #f7f8f4;
+  --white: #fff;
+  --line: #d7dedc;
+  --muted: #576679;
+  --yellow: #f2c14e;
+  font-family: "Segoe UI", "Noto Sans SC", "PingFang SC", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+img { max-width: 100%; }
+a { color: var(--blue); text-underline-offset: .2em; }
+a:focus-visible { outline: 3px solid var(--yellow); outline-offset: 4px; }
+[hidden] { display: none !important; }
+.shell { width: min(100% - 3rem, 1120px); margin-inline: auto; }
+.skip-link { position: absolute; top: -5rem; left: 1rem; z-index: 20; padding: .7rem 1rem; background: var(--yellow); color: var(--ink); }
+.skip-link:focus { top: 1rem; }
+.site-header { border-bottom: 1px solid var(--line); background: var(--white); }
+.header-inner { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+.brand { display: inline-flex; align-items: center; gap: .7rem; color: var(--ink); text-decoration: none; font-weight: 720; font-size: 1.15rem; }
+.brand img { border-radius: 11px; }
+.header-nav { display: flex; align-items: center; gap: 1.1rem; font-size: .93rem; }
+.header-nav a { color: var(--ink); text-decoration: none; }
+.header-nav a:hover, .header-nav a[aria-current="true"] { color: var(--blue); text-decoration: underline; text-decoration-thickness: 2px; }
+.nav-divider { width: 1px; height: 1.1rem; background: var(--line); }
+.kicker { color: var(--blue); font-weight: 700; margin: 0 0 1.3rem; }
+h1, h2, h3, p { overflow-wrap: break-word; }
+h1, h2, h3 { margin-top: 0; }
+h1, h2 { letter-spacing: -.035em; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, .9fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; padding-block: clamp(5rem, 9vw, 9rem); }
+.hero h1 { font-size: clamp(3.2rem, 6.2vw, 5.7rem); line-height: 1.11; font-weight: 700; margin-bottom: 1.8rem; }
+.hero-lead { max-width: 42ch; color: var(--muted); font-size: clamp(1.12rem, 1.5vw, 1.3rem); line-height: 1.8; margin: 0; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.4rem; margin-top: 2.3rem; }
+.button { display: inline-flex; justify-content: center; align-items: center; min-height: 50px; padding: .8rem 1.3rem; border-radius: 6px; text-align: center; font-weight: 700; text-decoration: none; }
+.button-primary { background: var(--ink); color: var(--white); }
+.button-primary:hover { background: var(--blue); }
+.text-link { font-weight: 650; }
+.word-scene { position: relative; min-height: 465px; padding: 2.4rem; overflow: hidden; background: #e6eeef; border-radius: 18px; }
+.scene-source { font-size: .9rem; color: var(--muted); margin: 0 0 2.3rem; }
+.scene-quote { position: relative; z-index: 1; max-width: 16ch; font: 400 clamp(2rem, 3.4vw, 3rem)/1.38 Georgia, "Times New Roman", serif; margin: 0; }
+.scene-quote mark { background: var(--yellow); color: var(--ink); padding: .03em .13em; }
+.word-ticket { position: relative; z-index: 2; width: min(100%, 310px); margin: 2rem 0 0 auto; padding: 1.2rem 1.5rem 1.35rem; background: var(--white); border: 1px solid #cdd8db; box-shadow: 0 14px 32px #17243a14; transform: rotate(-3deg); }
+.ticket-label, .ticket-context { display: block; color: var(--muted); font-size: .86rem; }
+.word-ticket strong { display: block; margin: .3rem 0 .5rem; color: var(--blue); font: 400 3.2rem/1 Georgia, serif; }
+.scene-accent { position: absolute; right: -3rem; bottom: -6rem; width: 240px; height: 240px; border: 28px solid var(--yellow); border-radius: 50%; }
+.section-band { background: var(--white); border-block: 1px solid var(--line); }
+.section-grid { display: grid; grid-template-columns: minmax(230px, .72fr) 1fr; gap: clamp(2.5rem, 8vw, 8rem); padding-block: clamp(4rem, 8vw, 7rem); }
+.section-heading h2, .sync-section h2, .closing-inner h2 { font-size: clamp(2.3rem, 4vw, 3.6rem); line-height: 1.2; }
+.feature { display: grid; grid-template-columns: 165px 1fr; gap: 1.5rem; padding: 1.4rem 0; border-top: 1px solid var(--line); }
+.feature:last-child { border-bottom: 1px solid var(--line); }
+.feature h3 { font-size: 1.15rem; margin: 0; }
+.feature p { margin: 0; color: var(--muted); line-height: 1.8; }
+.release-section { padding-block: clamp(4rem, 8vw, 7rem); }
+.release-heading { max-width: 720px; }
+.release-heading .kicker { margin-bottom: 1rem; }
+.release-heading h2 { font-size: clamp(2.3rem, 4vw, 3.6rem); line-height: 1.2; margin-bottom: 1rem; }
+.release-heading > p:last-child { color: var(--muted); line-height: 1.8; margin: 0; }
+.release-items { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin-top: 2.5rem; }
+.release-items article { padding: clamp(1.5rem, 3vw, 2.3rem); background: var(--white); border: 1px solid var(--line); border-top: 5px solid var(--yellow); }
+.release-number { color: var(--blue); font: 400 1.65rem Georgia, serif; }
+.release-items h3 { font-size: 1.3rem; margin: 1.25rem 0 .7rem; }
+.release-items p { color: var(--muted); line-height: 1.8; margin: 0; }
+.release-status { color: var(--muted); font-size: .94rem; line-height: 1.7; margin: 1.5rem 0 0; }
+.sync-section { display: grid; grid-template-columns: 1fr minmax(270px, .75fr); gap: clamp(2rem, 8vw, 8rem); align-items: center; padding-block: clamp(5rem, 9vw, 8rem); }
+.sync-section p { max-width: 55ch; line-height: 1.8; }
+.sync-section .quiet { color: var(--muted); }
+.sync-steps { background: #e7edef; padding: 1.25rem 2rem; border-left: 5px solid var(--yellow); }
+.sync-steps div { display: flex; align-items: baseline; gap: 1.3rem; border-bottom: 1px solid #cbd6d9; }
+.sync-steps div:last-child { border-bottom: 0; }
+.sync-steps span { color: var(--blue); font: 400 2rem Georgia, serif; }
+.sync-steps p { margin: 1.4rem 0; }
+.closing-band { background: var(--ink); color: var(--white); }
+.closing-inner { min-height: 230px; display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding-block: 3rem; }
+.closing-inner h2 { max-width: 17ch; margin: 0; }
+.button-light { color: var(--ink); background: var(--yellow); }
+.button-light:hover { background: #ffda79; }
+.site-footer { min-height: 110px; display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; color: var(--muted); font-size: .92rem; }
+.site-footer a { color: var(--muted); }
+.changelog { max-width: 860px; padding-block: clamp(3rem, 7vw, 6rem); }
+.changelog h1 { font-size: clamp(2.4rem, 5vw, 3.5rem); margin-bottom: 1rem; }
+.changelog-intro { max-width: 60ch; color: var(--muted); line-height: 1.8; }
+.version-index { display: flex; flex-wrap: wrap; gap: .8rem 1.6rem; padding-block: 1rem 2rem; }
+.version-entry { border-top: 1px solid var(--line); padding-block: 2.5rem; scroll-margin-top: 24px; }
+.version-heading { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.version-heading h2 { font-size: 2rem; margin: 0; }
+.version-heading h2 a { color: var(--ink); text-decoration: none; }
+.version-heading h2 a:hover { text-decoration: underline; }
+.release-state { border: 1px solid var(--line); border-radius: 5px; padding: .3rem .65rem; font-size: .85rem; }
+.release-state.upcoming { background: var(--yellow); border-color: var(--yellow); }
+.version-date, .release-footnote { color: var(--muted); font-size: .92rem; }
+.version-entry h3 { font-size: 1.1rem; margin: 1.8rem 0 .65rem; }
+.version-entry p, .version-entry li { line-height: 1.85; }
+.version-entry ul { padding-left: 1.3rem; margin-top: .65rem; }
+.version-entry li + li { margin-top: .6rem; }
+.version-entry .release-footnote { margin: 1.5rem 0 0; }
+.policy { max-width: 800px; padding-block: clamp(3.5rem, 7vw, 6rem) 6rem; }
+.policy h1 { font-size: clamp(2.3rem, 4.2vw, 3.4rem); line-height: 1.2; margin-bottom: .9rem; }
+.policy .date { color: var(--muted); font-size: .92rem; margin-bottom: 2rem; }
+.policy .lead { font-size: 1.18rem; line-height: 1.8; }
+.policy h2 { font-size: 1.65rem; margin: 3rem 0 .8rem; }
+.policy p, .policy li { line-height: 1.85; }
+.policy ul { padding-left: 1.4rem; }
+.policy li + li { margin-top: .5rem; }
+.policy code { padding: .08rem .3rem; border-radius: 3px; background: #e5eaeb; font-size: .9em; overflow-wrap: anywhere; }
+.policy .policy-nav { display: inline-block; margin-top: 3rem; font-weight: 700; }
+@media (max-width: 800px) {
+  .hero, .section-grid, .sync-section { grid-template-columns: 1fr; }
+  .release-items { grid-template-columns: 1fr; }
+  .hero { padding-block: 4rem; }
+  .word-scene { min-height: 410px; }
+  .section-grid, .sync-section { gap: 2rem; }
+}
+@media (max-width: 560px) {
+  .shell { width: min(100% - 2rem, 1120px); }
+  .header-inner { min-height: 72px; }
+  .brand { gap: .45rem; font-size: 1rem; }
+  .brand img { width: 32px; height: 32px; }
+  .header-nav { gap: .65rem; font-size: .85rem; }
+  .hero h1 { font-size: clamp(2.7rem, 13vw, 3.5rem); }
+  .word-scene { padding: 1.8rem; min-height: 400px; }
+  .feature { display: block; }
+  .feature p { margin-top: .5rem; }
+  .closing-inner { display: block; }
+  .closing-inner .button { margin-top: 1.5rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+</style>
 </head>
 <body>
-  <header>
-    <div class="wrap topbar">
-      <a class="brand" href="#english" aria-label="EchoWords privacy policy"><span class="mark" aria-hidden="true">E</span><span>EchoWords</span></a>
-      <nav aria-label="Language"><a href="#english" lang="en">English</a><a href="#chinese" lang="zh-CN">简体中文</a></nav>
-    </div>
-  </header>
-  <main class="wrap">
-    <article id="english" class="language" lang="en" aria-labelledby="title-en">
-      <div class="eyebrow">EchoWords · Chrome extension</div>
-      <h1 id="title-en">Privacy Policy</h1>
-      <p class="date">Effective October 13, 2026</p>
-      <p class="lead">EchoWords is a local-first Chrome extension for saving words you select from web pages, visible YouTube captions, and PDF selections.</p>
-
-      <h2>Data stored on your device</h2>
-      <p>EchoWords stores saved words, nearby article text or visible caption context, source titles and URLs, capture times, YouTube video IDs and timestamps, optional Traditional or Simplified Chinese translations of English words, English translations of Chinese words, and your edits. Vocabulary and local review dates, intervals, and counts are stored in IndexedDB in your current Chrome profile.</p>
-
-      <h2>Collection, translation, and sharing</h2>
-      <p>EchoWords does not send captured content, vocabulary, browsing history, or usage data to a developer server, analytics provider, advertising service, or other third party. It does not require an account or read or monitor your clipboard.</p>
-      <p>EchoWords’s use of information received from Google APIs adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements. It uses this information only to provide the vocabulary features described here.</p>
-      <p>After you choose a Chinese target language for English words, EchoWords uses Chrome’s built-in Translator API to translate saved English words into Chinese and saved Chinese words into English on your device. Your Chinese target-language preference is stored in localStorage in this Chrome profile. EchoWords does not make a translation network request or use a remote AI provider. Chrome may download and manage the required language packs.</p>
-      <p>Exports happen only when you choose an export action. Chrome saves the JSON file under your control. <strong>Export for iPhone</strong> contains only words and their corresponding translations (English for Chinese words, or your selected Chinese language for English words); <strong>Export JSON</strong> contains full backup records. EchoWords does not upload exports to Google Drive or another service. When you choose <strong>Import backup</strong>, EchoWords reads only the file you select, merges valid records into local IndexedDB, and does not upload the file.</p>
-
-      <h2>Chrome permissions</h2>
-      <ul>
-        <li><code>activeTab</code> and <code>scripting</code> read your explicit selection after you invoke the capture shortcut on an ordinary web page.</li>
-        <li>Access to <code>https://www.youtube.com/*</code> reads only captions currently rendered on screen and preserves video playback state.</li>
-        <li><code>contextMenus</code> provides a user-triggered PDF selection capture action.</li>
-        <li><code>offscreen</code> lets a hidden extension document read the saved localStorage language preference and run on-device translation after capture, even when the vocabulary page is closed.</li>
-      </ul>
-      <p>EchoWords does not download complete YouTube transcripts or automatically collect page content.</p>
-
-      <h2>Retention and deletion</h2>
-      <p>Data remains in your Chrome profile until you delete individual words, clear the extension’s site data, remove the extension, or delete the browser profile. Removing the extension or profile may permanently remove saved data. You can create a full local backup with <strong>Export JSON</strong>.</p>
-
-      <h2>Changes to this policy</h2>
-      <p>If EchoWords later adds network sync, accounts, analytics, or other data use, this policy and the extension’s permissions will be updated before that feature is released.</p>
-    </article>
-
-    <article id="chinese" class="language" lang="zh-CN" aria-labelledby="title-zh">
-      <div class="eyebrow">EchoWords · Chrome 扩展程序</div>
-      <h1 id="title-zh">隐私政策</h1>
-      <p class="date">生效日期：2026 年 10 月 13 日</p>
-      <p class="lead">EchoWords 是一款以本地存储为主的 Chrome 扩展程序，用于保存你在网页文章、屏幕上可见的 YouTube 字幕和 PDF 中选取的单词。</p>
+  <a class="skip-link" href="#main">跳转到正文 / Skip to content</a>
+  <header class="site-header"><div class="shell header-inner">
+    <a class="brand" href="https://echowords.xinxu.xin/" aria-label="语栖主页" data-brand-home><img src="data:image/png;base64,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" alt="" width="40" height="40"><span data-brand-name>语栖</span></a>
+    <nav class="header-nav" aria-label="Page navigation"><a href="https://echowords.xinxu.xin/?lang=zh" data-nav-zh>主页</a><a href="https://echowords.xinxu.xin/?lang=en" data-nav-en>Home</a><span class="nav-divider" aria-hidden="true"></span><a href="?lang=zh" data-language-link="zh" lang="zh-CN">中文</a><a href="?lang=en" data-language-link="en" lang="en">EN</a></nav>
+  </div></header>
+  <main id="main" class="shell policy" data-policy-platform="chrome">
+    <article id="zh" data-language-section="zh" lang="zh-CN" aria-labelledby="title-zh">
+      <p class="kicker">语栖 · Chrome 扩展</p><h1 id="title-zh">Chrome 扩展隐私政策</h1><p class="date">更新日期：2026 年 11 月 3 日</p>
+      <p class="lead">语栖 Chrome 扩展保存你从网页、当前可见的 YouTube 字幕及 PDF 中主动选取的词语。单词本首先保存在当前 Chrome 配置文件中。</p>
 
       <h2>保存在设备上的数据</h2>
-      <p>EchoWords 保存单词、附近的文章文本或可见字幕上下文、来源标题和网址、采集时间、YouTube 视频 ID 和时间戳，以及英文单词的繁体或简体中文翻译、中文词条的英文翻译和你的修改。词汇记录和本地复习日期、间隔、次数存储在当前 Chrome 配置文件的 IndexedDB 中。</p>
+      <p>扩展保存单词及修改、附近文章文本或可见字幕、来源标题与网址、采集时间、YouTube 视频 ID 与时间戳，以及词条翻译、可选的英文语境解释和复习进度。词库使用 IndexedDB；语言偏好保存在 localStorage，同步状态保存在浏览器本地存储中。</p>
+      <p>新采集的文章上下文最多保存 500 字符，来源标题最多 500 字符。YouTube 在内存中暂存最近约 20 秒、最多 1,200 字符的可见字幕，用于定位所选词所在的句子；仅保存该句，最多 1,200 字符。表单控件和可编辑区域不支持采集。新来源网址会移除嵌入的用户名、密码及常见跟踪参数（<code>utm_*</code>、<code>gclid</code>、<code>fbclid</code>、<code>msclkid</code>）；其余文章查询参数和片段会保留以便回访，仍可能含隐私信息。YouTube 来源链接仅保留视频 ID，播放时间单独保存。历史记录和导入备份不会自动清理。</p>
 
-      <h2>数据收集、翻译与共享</h2>
-      <p>EchoWords 不会将采集内容、词汇、浏览历史或使用数据发送给开发者服务器、分析服务商、广告服务商或其他第三方。它不要求注册账户，也不会读取或监控剪贴板。</p>
-      <p>EchoWords 对从 Google API 获取的信息的使用遵守 Chrome 网上应用店用户数据政策，包括“有限使用”要求。这些信息仅用于提供本政策所述的词汇功能。</p>
-      <p>为英文单词选择中文目标语言后，EchoWords 使用 Chrome 内置的 Translator API 在设备上将英文单词翻译为中文，并将中文词条翻译为英文。中文目标语言偏好保存在当前 Chrome 配置文件的 localStorage 中。EchoWords 不会为翻译发起网络请求，也不使用远程 AI 服务；Chrome 可能下载和管理所需的语言包。</p>
-      <p>只有你主动选择导出时才会生成文件，Chrome 将 JSON 文件保存到由你控制的位置。<strong>导出到 iPhone</strong> 仅包含单词及对应翻译（中文词条对应英文，英文单词对应所选中文）；<strong>导出 JSON</strong> 包含完整备份记录。EchoWords 不会将导出文件上传到 Google Drive 或其他服务。选择<strong>导入备份</strong>时，EchoWords 只读取你选择的文件，将有效记录合并到本地 IndexedDB，不会上传该文件。</p>
+      <p>词汇列表的每页数量保存在当前 Chrome 配置文件的 localStorage 中，不进入词库备份或 Google Drive 同步。</p>
+      <h2>音标查询</h2>
+      <p>Chrome 扩展保存新采集的英文词后，仅将该单词发送给 Free Dictionary API 查询美式优先的 IPA 音标；不会发送网页地址、字幕、上下文或账号资料。查询失败不影响单词保存。已有词条只有在你点击“查询音标”时才会查询。音标与 Wiktionary 来源链接保存在本地，启用 Drive 同步后也会进入词库快照。音标旁会展示词典和 Wiktionary 来源。</p>
 
-      <h2>Chrome 权限</h2>
+      <h2>Google Drive 自动同步</h2>
+      <p>Chrome 会将本地改动聚合约 30 秒后同步，连续操作时最长等待约 2 分钟，空闲时每 15 分钟检查远端文件元数据。仅下载变化的文件，词库和学习历史分别跳过未变化的上传；有变化时仍上传完整文件。本地 IndexedDB 保存已应用文件版本和成功上传的内容摘要，以避免后台重启后重复传输。</p>
+      <p>你启用同步并授权 Google 账号后，扩展会向该账号的隐藏应用数据目录上传<strong>完整单词本</strong>，包括词语、来源网址与摘录、采集记录、翻译、语境解释、复习记录和删除标记。扩展会在本地修改后及浏览器运行时自动同步，你也可以在设置中暂停。连接同一账号的 iPhone 应用可以读取这些词库快照，并将对 Chrome 词语的评分事件作为单独的学习历史文件上传。</p>
+      <p>同步使用 Google 授权，无需另注册账号。语栖通过 Google Drive API 读取授权账号的邮箱地址与账号标识，以显示并确认同步目标；本地保存账号标识和邮箱地址，以便显示同步状态并阻止意外切换账号。云端快照位于 Google Drive 的 <code>appDataFolder</code>，不会显示在普通的“我的云端硬盘”文件列表中。云端文件按设备分别保存，不会因为一次本地更新而自动删除。</p>
+      <p>语栖不会将单词本发送给开发者服务器、分析或广告服务。对 Google API 数据的使用仅限于本政策描述的同步功能。语栖对从 Google API 获取的信息的使用遵守 Chrome Web Store User Data Policy，包括其中的 Limited Use 要求。</p>
+      <h2>翻译、导入与导出</h2>
+      <p>选择中文目标语言后，语栖使用 Chrome 内置的 Translator API，在设备上翻译已保存的英文词和中文词条；不会向远程 AI 服务请求翻译。Chrome 可能下载所需的语言包。只有你主动选择导出时才会生成 JSON 文件；“导出到 iPhone”只包含词语及对应翻译，“导出 JSON”包含完整备份记录。导出操作不会上传文件。导入备份只读取你选择的文件并合并到本地数据库；启用自动同步后，导入的词条也会随词库同步。</p>
+
+      <h2>设备端语境解释</h2>
+      <p>只有你为已保存的采集记录点击“解释这次用法”时，语栖才会将该词和保存的句子交给 Chrome 内置的设备端 Prompt API。生成的英文词义及判断依据与该记录一起保存在本地；你可以编辑或删除。完整 JSON 备份会包含这些解释；启用 Drive 同步后，解释也会进入发送到你 Google 账号的词库快照。此功能不会把单词或句子发送给远程 AI 服务。Chrome 可能下载所需的设备端模型。</p>
+
+      <h2>浏览器权限</h2>
+      <p>文章选词模式仅将你主动选择的单词、短语及附近原句暂存在当前页面内存中，点击“保存全部”后才写入词库。未保存的选择不会同步，刷新或离开页面后即丢失。</p>
       <ul>
-        <li><code>activeTab</code> 和 <code>scripting</code>：你在普通网页上触发采集快捷键后，读取你明确选中的文本。</li>
-        <li><code>https://www.youtube.com/*</code>：仅读取当前显示在屏幕上的字幕，并保留视频播放状态。</li>
-        <li><code>contextMenus</code>：提供由用户触发的 PDF 选词采集操作。</li>
-        <li><code>offscreen</code>：即使词汇页面已关闭，也允许隐藏的扩展程序文档读取已保存的 localStorage 语言偏好，并在采集后执行设备端翻译。</li>
+        <li><code>activeTab</code> 与 <code>scripting</code>：在你触发快捷键或点击网页采集按钮后读取明确选中的文本。</li>
+        <li><code>http://*/*</code> 与 <code>https://*/*</code> 是可选权限，安装时不要求访问所有网站。在“网页采集”设置中逐个授权 HTTP 或 HTTPS 网站后，才在该网站加载按钮脚本；协议和子域名需分别授权。未授权网站仍可通过快捷键与 <code>activeTab</code> 采集。按钮只在你开始采集后读取文章文本。</li>
+        <li><code>https://www.youtube.com/*</code>：读取当前显示在屏幕上的字幕，并保持视频原有播放状态。</li>
+        <li><code>contextMenus</code>：提供由你触发的 PDF 选词菜单。</li>
+        <li><code>offscreen</code>：在词库页面关闭时读取已保存的语言偏好，运行设备端翻译。</li>
+        <li><code>identity</code> 与 <code>https://www.googleapis.com/*</code>：启用同步后请求 Google 授权并访问 Drive 应用数据。</li>
+        <li><code>https://freedictionaryapi.com/*</code>：查询新采集或手动重试的英文单词音标。</li>
+        <li><code>storage</code> 与 <code>alarms</code>：保存同步状态，并在 Chrome 运行时安排重试和定期检查。</li>
       </ul>
-      <p>EchoWords 不下载完整的 YouTube 字幕稿，也不会自动收集整个页面的内容。</p>
+      <p>语栖不监控剪贴板，不自动采集整个网页，也不下载完整 YouTube 字幕稿。</p>
 
+      <p>按钮总开关、已启用与已隐藏网站、YouTube 按钮显隐与更新说明确认状态保存在 <code>chrome.storage.local</code>，不进入词库备份或 Drive 同步。关闭总开关保留授权；隐藏网站会撤销该站可选权限和动态脚本注册，同时保留可点击“显示按钮”恢复的隐藏记录。“移除”会忘记该记录。恢复时会重新请求网站授权。点击工具栏图标后，当前网站的域名和协议会暂存于 <code>chrome.storage.session</code>，用于提供当前网站的恢复入口；不含网页路径或查询参数，仅保留于浏览器会话，不进入备份或同步。已加载脚本停止选词并隐藏按钮，刷新或离开页面后由 Chrome 卸载。</p>
       <h2>保留与删除</h2>
-      <p>数据会保留在 Chrome 配置文件中，直到你删除单个单词、清除扩展程序的网站数据、移除扩展程序或删除浏览器配置文件。移除扩展程序或配置文件可能永久删除已保存的数据。你可以使用<strong>导出 JSON</strong> 创建完整的本地备份。</p>
+      <p>本地数据会保留到你删除词条、清除应用数据、移除应用或删除 Chrome 配置文件。删除词条会生成删除标记，使其他设备在同步时识别该删除。Google Drive 快照保留在你的账号中，直到你移除相应的应用数据；清空本地词库后同步只会更新快照的逻辑内容，不会删除云端文件。你可以随时使用“导出 JSON”制作本地备份。</p>
 
-      <h2>政策变更</h2>
-      <p>如果 EchoWords 日后增加网络同步、账户、分析功能或其他数据用途，本政策和扩展程序权限将在相关功能发布前更新。</p>
+      <h2>联系我们与政策更新</h2>
+      <p>有关隐私或同步的问题，请联系 <a href="mailto:acboo2020@gmail.com">acboo2020@gmail.com</a>。若数据使用方式改变，我们会在相关功能发布前更新本政策。</p>
+      <a class="policy-nav" href="https://echowords.xinxu.xin/?lang=zh">← 返回语栖主页</a>
+    </article>
+
+    <article id="en" data-language-section="en" lang="en" aria-labelledby="title-en">
+      <p class="kicker">EchoWords · Chrome extension</p><h1 id="title-en">Chrome Extension Privacy Policy</h1><p class="date">Updated November 3, 2026</p>
+      <p class="lead">The EchoWords Chrome extension saves words you explicitly select from web pages, currently visible YouTube captions, and PDFs. The notebook is stored in your current Chrome profile first.</p>
+
+      <h2>Data stored on your device</h2>
+      <p>The extension stores words and your edits, nearby article text or visible caption context, source titles and URLs, capture times, YouTube video IDs and timestamps, translations, optional English explanations in saved sentence context, and review progress. The notebook uses IndexedDB; the language preference is kept in localStorage and sync state in browser local storage.</p>
+      <p>New article context is limited to 500 characters and source titles to 500 characters. YouTube temporarily keeps up to 20 seconds and 1,200 characters of recently visible captions in memory to locate the selected sentence; only that sentence is saved, up to 1,200 characters. Capture is unavailable in forms and editable areas. New source links omit embedded usernames/passwords and common tracking parameters (<code>utm_*</code>, <code>gclid</code>, <code>fbclid</code>, <code>msclkid</code>). Other article query parameters and fragments remain for working links and may contain private information. YouTube links retain only the video ID, with playback time stored separately. Historical records and imported backups are not automatically scrubbed.</p>
+
+      <p>The vocabulary page-size preference is stored in localStorage for this Chrome profile only and is excluded from notebook backups and Google Drive sync.</p>
+      <h2>IPA lookup</h2>
+      <p>After saving a newly captured English word, the Chrome extension sends only that word to Free Dictionary API to look up IPA, preferring a US pronunciation. It sends no page URL, caption, context, or account details. Lookup failure does not affect the saved word. Older words are queried only when you select “Look up IPA.” IPA and the Wiktionary source link are stored locally and included in Drive snapshots if sync is enabled. Dictionary and Wiktionary attribution appears beside the IPA.</p>
+
+      <h2>Automatic Google Drive sync</h2>
+      <p>Chrome batches local changes for about 30 seconds, up to 2 minutes during continuous changes, and checks remote file metadata every 15 minutes. Only changed files are downloaded, and unchanged vocabulary and learning-history uploads are skipped independently. Changed files still contain complete snapshots. Applied file versions and successful upload content digests are stored locally in IndexedDB to avoid repeated transfers after a background-worker restart.</p>
+      <p>After you enable sync and authorize a Google account, the extension uploads your <strong>full notebook</strong> to its hidden app data folder. This includes words, source URLs and excerpts, capture records, translations, context explanations, review records, and deletion markers. The extension automatically syncs after local changes and while the browser runs; you can pause it in Settings. An iPhone app connected to the same account can read these notebook snapshots and upload ratings for Chrome words as separate learning-history files.</p>
+      <p>Sync uses Google authorization; no EchoWords account is required. EchoWords reads the authorized account’s email address and identifier through the Google Drive API to show and confirm the sync destination. It stores the identifier and email locally to display sync status and prevent an accidental account change. Cloud snapshots reside in Google Drive’s <code>appDataFolder</code> and do not appear in the normal My Drive file list. Snapshots are kept separately for each device and are not automatically deleted by a local update.</p>
+      <p>EchoWords does not send your notebook to a developer server, analytics provider, or advertiser. Its use of Google API data is limited to the sync feature described here. EchoWords's use of information received from Google APIs adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
+      <h2>Translation, import, and export</h2>
+      <p>After you choose a Chinese target language, EchoWords uses Chrome’s built-in Translator API to translate saved English and Chinese words on your device; it does not request translation from a remote AI service. Chrome may download required language packs. A JSON file is created only when you choose an export action: “Export for iPhone” contains words and their translations, while “Export JSON” contains full backup records. Export does not upload a file. Import reads only the backup you select and merges valid records locally; with automatic sync enabled, imported words are included in subsequent syncs.</p>
+
+      <h2>On-device context explanations</h2>
+      <p>Only when you select “Explain this use” for a saved encounter does EchoWords provide that word and its saved sentence to Chrome’s on-device Prompt API. The generated English meaning and supporting reason are stored locally with the encounter; you can edit or delete them. Full JSON backups include these explanations, and enabling Drive sync includes them in the notebook snapshot sent to your Google account. This feature does not send the word or sentence to a remote AI provider. Chrome may download the required on-device model.</p>
+
+      <h2>Chrome permissions</h2>
+      <p>Article selection mode keeps only explicitly chosen words, phrases, and nearby sentences in the current page’s memory until you choose “Save all.” Unsaved selections are not synced and disappear when you refresh or leave the page.</p>
+      <ul>
+        <li><code>activeTab</code> and <code>scripting</code> read explicitly selected text after you invoke the shortcut or click the page capture button.</li>
+        <li><code>http://*/*</code> and <code>https://*/*</code> are optional host permissions. Access to all websites is not required at installation. Authorize individual HTTP or HTTPS websites in Page capture settings to load article button scripts there. Protocols and subdomains are separate. The shortcut still works via <code>activeTab</code> without saved website authorization. Article text is read only after you start capture.</li>
+        <li><code>https://www.youtube.com/*</code> reads only captions currently rendered on screen and preserves playback state.</li>
+        <li><code>contextMenus</code> provides the user-triggered PDF selection action.</li>
+        <li><code>offscreen</code> reads your saved language preference and runs on-device translation when the notebook page is closed.</li>
+        <li><code>identity</code> and <code>https://www.googleapis.com/*</code> request Google consent and access Drive app data after sync is enabled.</li>
+        <li><code>https://freedictionaryapi.com/*</code> looks up IPA for newly captured English words or a manual retry.</li>
+        <li><code>storage</code> and <code>alarms</code> retain sync state and schedule retries and periodic checks while Chrome runs.</li>
+      </ul>
+      <p>EchoWords does not monitor your clipboard, automatically collect whole pages, or download complete YouTube transcripts.</p>
+
+      <p>Button visibility, enabled and hidden websites, YouTube visibility and release acknowledgement are stored in <code>chrome.storage.local</code>, excluded from notebook backups and Drive sync. Turning buttons off preserves authorizations. Hiding a website revokes its optional permission and dynamic registration but retains a hidden entry with a Show button action. Remove forgets that entry. Restoring requests website permission again. Clicking the toolbar icon keeps the current hostname/protocol in <code>chrome.storage.session</code> to offer a restore action; this hint contains no page path or query, lasts only for the browser session, and is excluded from backups and sync. Loaded scripts stop selection and hide the button; Chrome unloads them when the page is refreshed or left.</p>
+      <h2>Retention and deletion</h2>
+      <p>Local data remains until you delete words, clear extension data, remove the extension, or delete your Chrome profile. Deleting a word creates a deletion marker so other devices can recognize it on a later sync. Drive snapshots remain in your Google account until you remove the associated app data; clearing the local notebook and syncing updates their logical contents but does not remove the cloud files. You can create a local backup with “Export JSON.”</p>
+
+      <h2>Contact and changes</h2>
+      <p>For privacy or sync questions, contact <a href="mailto:acboo2020@gmail.com">acboo2020@gmail.com</a>. Changes in data use will be documented here before the related feature is released.</p>
+      <a class="policy-nav" href="https://echowords.xinxu.xin/?lang=en">← Back to EchoWords</a>
     </article>
   </main>
-  <footer><div class="wrap">© EchoWords · <a href="#english">English</a> / <a href="#chinese">简体中文</a></div></footer>
+  <footer class="site-footer shell"><span data-brand-footer>© 语栖</span><a href="https://echowords.xinxu.xin/?lang=zh" data-nav-zh>主页</a><a href="https://echowords.xinxu.xin/?lang=en" data-nav-en>Home</a><a href="https://echowords.xinxu.xin/releases/?lang=zh" data-nav-zh>更新日志</a><a href="https://echowords.xinxu.xin/releases/?lang=en" data-nav-en>Release notes</a><a href="mailto:acboo2020@gmail.com">联系 / Contact</a></footer>
+<script>
+(() => {
+  const sections = [...document.querySelectorAll("[data-language-section]")];
+  if (!sections.length) return;
+
+  function showLanguage(language) {
+    document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
+    const isPrivacyPage = Boolean(document.querySelector(".policy"));
+    const isIOSPrivacyPage = Boolean(document.querySelector('[data-policy-platform="ios"]'));
+    const isReleasePage = Boolean(document.querySelector(".changelog"));
+    document.title = language === "zh"
+      ? (isIOSPrivacyPage ? "iOS 应用隐私政策 · 语栖 EchoWords" : isPrivacyPage ? "Chrome 扩展隐私政策 · 语栖 EchoWords" : "语栖 EchoWords — 留住遇见的词")
+      : (isIOSPrivacyPage ? "iOS App Privacy Policy · EchoWords" : isPrivacyPage ? "Chrome Extension Privacy Policy · EchoWords" : "EchoWords — Keep the words you meet");
+    if (isReleasePage) document.title = language === "zh" ? "更新日志 · 语栖 EchoWords" : "Release notes · EchoWords";
+    for (const brand of document.querySelectorAll("[data-brand-name]")) {
+      brand.textContent = language === "zh" ? "语栖" : "EchoWords";
+    }
+    for (const brand of document.querySelectorAll("[data-brand-home]")) {
+      brand.setAttribute("aria-label", language === "zh" ? "语栖主页" : "EchoWords home");
+    }
+    for (const footer of document.querySelectorAll("[data-brand-footer]")) {
+      footer.textContent = language === "zh" ? "© 语栖" : "© EchoWords";
+    }
+    for (const section of sections) section.hidden = section.dataset.languageSection !== language;
+    for (const link of document.querySelectorAll("[data-language-link]")) {
+      if (isReleasePage) link.setAttribute("href", `?lang=${link.dataset.languageLink}${location.hash}`);
+      if (link.dataset.languageLink === language) link.setAttribute("aria-current", "true");
+      else link.removeAttribute("aria-current");
+    }
+    for (const link of document.querySelectorAll("[data-nav-zh]")) link.hidden = language !== "zh";
+    for (const link of document.querySelectorAll("[data-nav-en]")) link.hidden = language !== "en";
+    for (const link of document.querySelectorAll("[data-brand-home]")) {
+      const url = new URL(link.getAttribute("href"), location.href);
+      url.searchParams.set("lang", language);
+      link.setAttribute("href", url.href);
+    }
+  }
+
+  function languageFromLocation() {
+    const requested = new URLSearchParams(location.search).get("lang");
+    if (requested === "zh" || requested === "en") return requested;
+    return navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en";
+  }
+
+  showLanguage(languageFromLocation());
+  if (document.querySelector(".changelog")) {
+    window.addEventListener("hashchange", () => {
+      for (const link of document.querySelectorAll("[data-language-link]")) {
+        link.setAttribute("href", `?lang=${link.dataset.languageLink}${location.hash}`);
+      }
+    });
+  }
+  // Shared version anchors remain valid after language-specific content is hidden.
+  if (document.querySelector(".changelog") && location.hash) {
+    requestAnimationFrame(() => document.getElementById(location.hash.slice(1))?.scrollIntoView());
+  }
+})();
+
+</script>
 </body>
 </html>
